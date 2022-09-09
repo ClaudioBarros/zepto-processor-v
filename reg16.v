@@ -1,6 +1,6 @@
 //16-bit register using a flip-flop D for storing a bit
 
-module reg16(in, out, out_inv, clk, rst, )
+module reg16(in, out, out_inv, clk, rst);
 
 	input [15:0] in;
 	output reg [15:0] out;
