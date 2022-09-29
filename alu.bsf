@@ -1,0 +1,84 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 32 32 360 232)
+	(text "alu" (rect 37 32 51 44)(font "Arial" ))
+	(text "inst" (rect 24 176 41 188)(font "Arial" ))
+	(port
+		(pt 296 0)
+		(input)
+		(text "a[15..0]" (rect 0 32 37 44)(font "Arial" ))
+		(text "a[15..0]" (rect 288 25 300 62)(font "Arial" )(vertical))
+		(line (pt 296 0)(pt 296 17)(line_width 3))
+	)
+	(port
+		(pt 264 0)
+		(input)
+		(text "b[15..0]" (rect 0 32 37 44)(font "Arial" ))
+		(text "b[15..0]" (rect 256 25 268 62)(font "Arial" )(vertical))
+		(line (pt 264 0)(pt 264 17)(line_width 3))
+	)
+	(port
+		(pt 224 0)
+		(input)
+		(text "imm[15..0]" (rect 0 32 53 44)(font "Arial" ))
+		(text "imm[15..0]" (rect 216 25 228 78)(font "Arial" )(vertical))
+		(line (pt 224 0)(pt 224 17)(line_width 3))
+	)
+	(port
+		(pt 64 0)
+		(input)
+		(text "op[3..0]" (rect 0 32 37 44)(font "Arial" ))
+		(text "op[3..0]" (rect 56 25 68 62)(font "Arial" )(vertical))
+		(line (pt 64 0)(pt 64 17)(line_width 3))
+	)
+	(port
+		(pt 160 200)
+		(output)
+		(text "res[15..0]" (rect 144 32 191 44)(font "Arial" ))
+		(text "res[15..0]" (rect 152 129 164 176)(font "Arial" )(vertical))
+		(line (pt 160 200)(pt 160 184)(line_width 3))
+	)
+	(port
+		(pt 128 200)
+		(output)
+		(text "zero_res" (rect 144 32 185 44)(font "Arial" ))
+		(text "zero_res" (rect 120 135 132 176)(font "Arial" )(vertical))
+		(line (pt 128 200)(pt 128 184))
+	)
+	(port
+		(pt 192 200)
+		(output)
+		(text "status[3..0]" (rect 144 32 200 44)(font "Arial" ))
+		(text "status[3..0]" (rect 184 120 196 176)(font "Arial" )(vertical))
+		(line (pt 192 200)(pt 192 184)(line_width 3))
+	)
+	(drawing
+		(line (pt 0 0)(pt 104 200))
+		(line (pt 104 200)(pt 224 200))
+		(line (pt 224 200)(pt 328 0))
+		(line (pt 0 0)(pt 136 0))
+		(line (pt 136 0)(pt 168 56))
+		(line (pt 168 56)(pt 200 0))
+		(line (pt 200 0)(pt 328 0))
+	)
+)

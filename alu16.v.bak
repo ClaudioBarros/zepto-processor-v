@@ -1,0 +1,28 @@
+module alu(a, b, res, zero_res, status);
+	input [15:0] a;
+	input [15:0] b;
+	input [3:0] op;
+
+	output reg [15:0] res;
+	output reg zero_res;
+	output reg [3:0] status;
+	
+	comp16 comp(
+		.a(a), .b(b), 
+	    .neq(status[2]),
+		.geq(status[1]),
+		.l(status[0]),
+		.l(status[0]));
+
+	assign zero_res = (res == 16'b0);
+
+	always @ (*) begin
+		case(op)
+			4'b0000: res = a + b0;
+			4'b0001: res = a - b0;
+			4'b0010: res = a & b0; 
+			4'b0011: res = a | b0;
+			4'b0100: res = a ^ b0; 
+			default: res = 16'b0;
+	end
+endmodule

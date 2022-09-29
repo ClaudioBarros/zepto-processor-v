@@ -1,0 +1,52 @@
+
+module control_unit(instruction, alu_opcode);
+
+	input [31:0] inst;
+	
+	input 
+	
+	output [3:0] alu_opcode;
+	output reg we;
+
+	reg [15:0] imm;
+	reg [3:0] opcode;
+	reg [3:0] ra;
+	reg [3:0] rb;
+	reg [3:0] rd;
+	
+	reg [15:0] alu_result;
+	
+	assign imm = inst[31:15];
+	assign ra = inst[15:12];
+	assign rb = inst[11:8];
+	assign rd = inst[7:4];
+	assign opcode = inst[3:0];
+
+	case 
+		4'b0000: //addi rd, ra, rb, imm
+			res = a + b0; 
+		4'b0001: //subi rd, ra, rb, imm
+			res = a - b0; 
+		4'b0010: //andi rd, ra, rb, imm
+			res = a & b0;  	 
+		4'b0011: //ori rd, ra, rb, imm
+			res = a | b0; 
+		4'b0100: //xori rd, ra, rb, imm
+			res = a ^ b0;  
+		4'b0101: //beq ra, rb, imm 
+			res = a ^ b0; 
+		4'b0110: //bne ra, rb, imm 
+			res = a ^ b0; 
+		4'b0111: //bge ra, rb, imm 
+			res = a ^ b0; 
+		4'b1001: //blt ra, rb, imm 
+			res = a ^ b0; 
+		4'b1011: //jal rd, imm
+			res = a ^ b0; 
+		4'b1100: //jalr rd, ra, imm 
+			res = a ^ b0;  
+	endcase
+
+
+
+endmodule
